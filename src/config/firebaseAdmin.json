@@ -1,0 +1,12 @@
+{
+        "type": "service_account",
+        "project_id": "mrf-equipamentos",
+        "private_key_id": "91e0f3ebfa5fcd4b43dea8ebb6c3f34700512c27",
+        "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDQBPNm5TybCQXV\nj7dRPgiX7N5EyNuFsWQt/VVyjD64NiBaGuh6nX/dN8O7rdGiG0GlJSaiz5+Da/uS\nkYnk70wK7gV8+K0Wint6G7mAMnhhprfK99NJ/8GuiuO7/gsH9sQ5EIxKvWhfmrho\nsAwF2gWqM5FvroYxkwHrptsb67vtGHBCBV6q9eslFexuTS1xILGAWbM3RTGkIvTZ\nvvv9T4pnbhwf8DVe1him4Gk1eavIU6u0L+IhjzV1/xZMFygWw6LPinpVk+5sMgop\nkvp14w3ZbMnuSLhChqB2TfwxLRP67UrUz0xS27UUAJBY2Ky7YfQ9BOZoXL23ALMr\nqtxhRwtDAgMBAAECggEACcQYIuSJ2KpIk9Yp2eHHrxpEjrlY7qKwliTzaTiCv7M+\nB/zrafyq9bMAhXclOGJMARM71R9aP2YUBLWNSJCgSU/gNUj95Bw5EwQdZiwrnd06\nrVS+0eKOY6gxn0nPl5G5dKEwqCTSszclIThJC2oVvTMRyOR9eFmM5Ygkqt+0wVTA\nN+NsYFGuHPPryd62O+Ek38SI2lApgzhhonehoq/Vsr14AkQIB+aIeELWt7MVo/6M\nkLCJgQ01xGqtvafa/fAfa4LmpVhUWfs97cs3LO7DrcRNGLkyQsGblFTBn19jpTRZ\nANrdd90dy59o/jSjk6Y5SM3U17Rl/MIf3l3qKcd1AQKBgQD+XnAWgnVRcDqTbjyq\nzxfQomG2/zuqkGqQx+ljI4N8bEzIrKMZTcTuYvx+vDFXMf2Fsmri5KJvweeZIR1C\n2aNVX9ELzpVw3NIWGcuNxcB+L5tSeHlOAeBGoagfNpH8jzT127dWo6mLiBzVW2KN\nGlUVoDjiLSfgBDkSywPNxHdPMwKBgQDRWm1jiXI4X1qv2UAHApowRFuk/AvfMNmq\n6+vjEy9VhXM8TwVuJOOa/VMpGQQgFFLoKr85JgBOjdkBu538L9IcixaSt4l3HGNs\nDfQB6MBlnjztQeZ2tCWfwoPR/ECU141ZMxSjUaj4wtYqv1sVfNLQ2S0gqKpXaWse\naAaY0nWTsQKBgQCPun7tSSPPM3H1sjlXbpMPUWGTTF7DfryoOD14xi1albtBPMMf\n3iCjbo0rc10R3u5YqDrbH8NlEJSzotFs35r5950gZcdtMWkIEeVBo3akFnRWQjqQ\nyGCYqGld0bDlm2mabl8G9o0riWp5aBykjDd9c74QluFMJDa3lrz8fMHJnwKBgBp3\nQQ7tSEhCHbfPUh3QwWdKrP89cc7EYTAPZSGuwjQgi8HbB4e2GCP21HWEmRXpG9YH\n2WbDHBTSL9XdPwqrjPdYygDAPRuWtibp2KgJIZF3IKKpyxXEjmEU+Q8pwYxPd6oI\nIBrJbwALuYFr8XrU7d3DJsZTLD2isQ0F/5eAO6bxAoGBAPiqMd/dELwQXoFuzrDT\nMNQLR+MNPrzdmWBCiA8Lz1vlA5OF8xkV5HQNODuAZ+0zh8iHTnBAzncEnT1bcenz\nxc6fw2oZtjIeKKnd0DwE/ZiZcZlPAANOxRephvq2iEou4vjsIjIuUA6fbQV2s8Bj\nmgrleqgGs4U3kTdhKWL+GTea\n-----END PRIVATE KEY-----\n",
+        "client_email": "firebase-adminsdk-um056@mrf-equipamentos.iam.gserviceaccount.com",
+        "client_id": "103307084845846744921",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-um056%40mrf-equipamentos.iam.gserviceaccount.com"    
+}

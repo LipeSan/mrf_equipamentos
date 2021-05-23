@@ -31,7 +31,7 @@ const getEquipmentById = (equipmentId: string) => {
             const data = snapshot.val();
             if (data.images && data.images.length > 0) {
                 data.images.forEach((elem: any) => {
-                    elem.path = elem.url;
+                    elem.name = elem.url;
                     elem.url = firebaseConfig.urlImage1 + elem.url + firebaseConfig.urlImage2;
                 })
             }
@@ -53,7 +53,7 @@ const getEquipments = () => {
 
                 if (elementAux.images && elementAux.images.length > 0) {
                     elementAux.images.forEach((elem: any) => {
-                        elem.path = elem.url;
+                        elem.name = elem.url;
                         elem.url = firebaseConfig.urlImage1 + elem.url + firebaseConfig.urlImage2;
                     })
                 }

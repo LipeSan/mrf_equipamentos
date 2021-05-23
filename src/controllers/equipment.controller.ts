@@ -29,6 +29,11 @@ const getEquipmentById = (equipmentId: string) => {
     return new Promise((resolve, reject) => {
         database.ref('equipments/' + equipmentId).on('value', (snapshot: any) => {
             const data = snapshot.val();
+            if (data.images && data.images.length > 0) {
+                data.images.forEach((elem: any) => {
+                    elem.url = firebaseConfig.urlImage1 + elem.url + firebaseConfig.urlImage2;
+                })
+            }
             resolve({ success: true, message: '', data: data })
         }, (error: any) => {
             console.log("ERROR - getEquipmentById", error);
@@ -44,10 +49,10 @@ const getEquipments = () => {
             snapshot.forEach((element: any) => {
                 let elementAux = element.val();
                 //console.log("DATA",elementAux.images.length);
-                
-                if(elementAux.images && elementAux.images.length > 0){
-                    elementAux.images.forEach((elem:any) => {
-                        elem.url = firebaseConfig.urlImage1+elem.url+firebaseConfig.urlImage2;
+
+                if (elementAux.images && elementAux.images.length > 0) {
+                    elementAux.images.forEach((elem: any) => {
+                        elem.url = firebaseConfig.urlImage1 + elem.url + firebaseConfig.urlImage2;
                     })
                 }
                 resultList.push(elementAux);
@@ -82,33 +87,33 @@ const updateEquipamentById = (equipmentId: string, equipment: any) => {
 }
 
 const uploadImages = async (imagePath: string, file: any) => {
-    return new Promise( async (resolve, reject) => {
-        let urlList:any = [];
+    return new Promise(async (resolve, reject) => {
+        let urlList: any = [];
         console.log("DATA");
-        
-            let typeFile = file.mimetype.split('/')[1];
-            const fileName = `${imagePath}_${Common.generateSerieNumber()}.${typeFile}`;
-            let newFileName = `images/${fileName}`;
-            let fileUpload = bucket.file(newFileName);
-            const blobStream = fileUpload.createWriteStream({
-                resumable: true,
-                metadata: { 
-                    ContentType: file.mimetype,
-                    metadata: {
-                        firebaseStorageDownloadTokens: null, // Can technically be anything you want
-                      },
-                }
-            });
-            blobStream.on('error', (error: any) => {
-                console.log("ERROR - uploadImages 1",error);
-                reject({ success: false, message: '', data: error });
-            });
-            blobStream.on('finish', () => {
-                resolve({success: true, message:'', data:{url:fileName}});
-            }).on('error', (error: any) => {
-                console.log("ERROR - uploadImages 2", error);
-                reject({success:false, message:'', data: error});
-                }).end(file.buffer);
+
+        let typeFile = file.mimetype.split('/')[1];
+        const fileName = `${imagePath}_${Common.generateSerieNumber()}.${typeFile}`;
+        let newFileName = `images/${fileName}`;
+        let fileUpload = bucket.file(newFileName);
+        const blobStream = fileUpload.createWriteStream({
+            resumable: true,
+            metadata: {
+                ContentType: file.mimetype,
+                metadata: {
+                    firebaseStorageDownloadTokens: null, // Can technically be anything you want
+                },
+            }
+        });
+        blobStream.on('error', (error: any) => {
+            console.log("ERROR - uploadImages 1", error);
+            reject({ success: false, message: '', data: error });
+        });
+        blobStream.on('finish', () => {
+            resolve({ success: true, message: '', data: { url: fileName } });
+        }).on('error', (error: any) => {
+            console.log("ERROR - uploadImages 2", error);
+            reject({ success: false, message: '', data: error });
+        }).end(file.buffer);
     })
 
 

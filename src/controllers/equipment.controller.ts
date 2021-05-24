@@ -69,16 +69,16 @@ const getEquipments = () => {
 
 const updateEquipamentById = (equipmentId: string, equipment: any) => {
     return new Promise((resolve, reject) => {
-        database.ref('equipments').orderByChild(equipmentId).once('value').then((snapshot: any) => {
+        database.ref('equipments').child(equipmentId).once('value').then((snapshot: any) => {
             if (snapshot.hasChildren()) {
-                snapshot.forEach((child: any) => {
-                    child.ref.update(equipment).then((data: any) => {
+                    snapshot.ref.update(equipment).then((data: any) => {
                         resolve({ success: true, message: '', data: data })
                     }).catch((error: any) => {
                         console.log("ERROR - updateEquipamentById", error);
                         reject({ success: false, message: '', data: null })
                     });
-                });
+            } else {
+                reject({ success: false, message: '', data: null })
             }
         }).catch((error: any) => {
             console.log("ERROR - updateEquipamentById", error);
